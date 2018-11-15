@@ -11,6 +11,5 @@ class CustomerReport:
         totalPrice = 0
         for i in range(len(self.containers)):
             totalPrice = totalPrice + self.containers[i].contractPrice
-            print(self.containers[i].contractPrice)
 
         return totalPrice
