@@ -22,7 +22,8 @@ def readFile(port, loc):
         contractPrice = sheet.cell_value(row, 7)
         businessValue = sheet.cell_value(row, 8)
         print(id, x, y, z, customer, contractPrice, businessValue)
-        
+        print(1)
+
 
 
 
