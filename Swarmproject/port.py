@@ -6,12 +6,10 @@ import numpy as np
 
 class Port:
     def __init__(self):
-        self.nextFreeRaw = 0
+        self.nextFreeRow = 0
         self.movesLeft = 100
         self.customerReports = []
-        self.stacks = np.array([[Stack() for i in xrange(10)] for j in xrange(10)])
+        self.stacks = np.array([[Stack() for i in range(10)] for j in range(5)])
 
     def addContainer(self, container):
-        for i in range(10):
-            if self.stacks[i, self.nextFreeRaw].isFull() == False:
-                self.stacks[i, self.nextFreeRaw].addContainer(container)
+        print("larry")

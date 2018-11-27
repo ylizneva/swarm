@@ -6,7 +6,7 @@ class Stack:
         self.containers = []
     def isFull(self):
         #global isFull
-        if len(self.containers) == 5:
+        if len(self.containers) == 10:
             return True
         else:
             return False
