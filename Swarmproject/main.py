@@ -10,7 +10,6 @@ import xlrd as xlrd
 def readFile(port, loc):
     wb = xlrd.open_workbook(loc)
     sheet = wb.sheet_by_index(0)
-    print(sheet.nrows)
 
     for j in range(sheet.nrows-1):
         row = j+1
@@ -21,15 +20,11 @@ def readFile(port, loc):
         customer = sheet.cell_value(row, 4)
         contractPrice = sheet.cell_value(row, 7)
         businessValue = sheet.cell_value(row, 8)
-        print(id, x, y, z, customer, contractPrice, businessValue)
-        print(1)
+        container = Container(id, x, y, z, customer, contractPrice, businessValue)
+        port.addContainer(container)
 
-
-
-
-
-
-
+        # for i in range(len(port.containers)):
+        #     print(port.containers[i].x, port.containers[i].y, port.containers[i].z)
 
 
 

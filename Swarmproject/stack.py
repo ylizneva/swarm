@@ -3,13 +3,14 @@ from container import Container
 
 class Stack:
     def __init__(self):
-        self.containers = []
+        self.containerStack = []
     def isFull(self):
         #global isFull
-        if len(self.containers) == 10:
+        if len(self.containerStack) == 10:
             return True
         else:
             return False
-    def addContainer(self, container):
+    def addContainerToStack(self, container):
         if self.isFull() == False:
-            self.containers.append(container)
+            #self.containerStack[int(container.y)-1] = container
+            self.containerStack.append(container)
