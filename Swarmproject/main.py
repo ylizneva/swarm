@@ -31,3 +31,4 @@ port = Port()
 
 
 readFile(port, loc)
+port.findHighestValueInColumn(1)
