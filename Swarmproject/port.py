@@ -6,10 +6,12 @@ import numpy as np
 
 class Port:
     def __init__(self):
-        self.nextFreeRow = 0
         self.movesLeft = 100
         self.customerReports = []
-        self.stacks = np.array([[Stack() for i in range(10)] for j in range(5)])
+        self.stacks = np.array([[Stack() for x in range(10)] for y in range(10)])
 
     def addContainer(self, container):
-        print("larry")
+        self.stacks[container.x-1][container.y-1].addToStack(container)
+
+    def getContainerAt(self, x, y, z):
+        return self.stacks[x-1][y-1].getByZ(z)
