@@ -1,16 +1,20 @@
 from container import Container
+import numpy as np
 
 
 class Stack:
     def __init__(self):
-        self.containerStack = []
+        self.containers = np.empty(10, dtype=object)
+        self.nrOf = 0
     def isFull(self):
-        #global isFull
-        if len(self.containerStack) == 10:
+        if self.nrOf == 10:
             return True
         else:
             return False
-    def addContainerToStack(self, container):
+    def addToStack(self, container):
         if self.isFull() == False:
-            #self.containerStack[int(container.y)-1] = container
-            self.containerStack.append(container)
+            print("test: ", container.z-1)
+            self.containers[container.z-1] = container
+            self.nrOf = self.nrOf + 1
+    def getByZ(self, z):
+        return self.containers[z-1]
