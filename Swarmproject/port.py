@@ -15,13 +15,11 @@ class Port:
 
     def getContainerAt(self, x, y, z):
         return self.stacks[x-1][y-1].getByZ(z)
+    def getContainersOnTop(self, x, y, z):
+        return self.stacks[x-1][y-1].above(z)
+    def getHighestValueInStack(self, x, y):
+        return self.stacks[x-1][y-1].getHighestContract()
 
-    def findHighestValueInColumn(self, column): #kolumen, vågrätt. Mellan 1-10
-        highestValue = self.stacks[0][column].getByZ(1)
-        print(highestValue.id)
-        for i in range(10):
-            for k in range(5):
-                print(self.stacks[i][column].getByZ(k).id)
-                if highestValue.contractPrice < self.stacks[i][column].getByZ(k).contractPrice:
-                    highestValue = self.stacks[i][column].getByZ(k)
-        return highestValue
+
+
+    #def findHighestValueInColumn(self, column):

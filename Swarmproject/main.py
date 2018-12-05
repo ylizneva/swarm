@@ -30,4 +30,6 @@ port = Port()
 
 
 readFile(port, loc)
-port.findHighestValueInColumn(1)
+print(port.getHighestValueInStack(1,1).id)
+
+#port.findHighestValueInColumn(1)
