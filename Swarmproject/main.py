@@ -25,11 +25,13 @@ def readFile(port, loc):
         port.addContainer(containerToAdd)
 
 
+
 loc = "sheet.xlsx"
 port = Port()
 
 
 readFile(port, loc)
-print(port.getHighestValueInStack(1,1).id)
+port.getInQueue()
+#port.getInQueue()
 
 #port.findHighestValueInColumn(1)

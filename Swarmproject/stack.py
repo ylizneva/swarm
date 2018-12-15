@@ -7,7 +7,7 @@ class Stack:
         self.containers = np.empty(10, dtype=object)
         self.nrOf = 0
     def isFull(self):
-        if self.nrOf == 10:
+        if self.nrOf == 5:
             return True
         else:
             return False
@@ -31,3 +31,13 @@ class Stack:
                 if(highestValue.contractPrice - self.above(highestValue.z))<(self.containers[i].contractPrice - self.above(self.containers[i].z)):
                     highestValue = self.containers[i]
         return highestValue
+    def getTop(self):
+        if self.nrOf == 0:
+            return -1
+        container = self.containers[self.nrOf-1]
+
+        #print("Antal conta inrar i stack: ",self.nrOf-1)
+        if container is None:
+                return -1
+        #print("return:")
+        return container

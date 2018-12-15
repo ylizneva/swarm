@@ -7,3 +7,8 @@ class Container:
         self.customer = customer
         self.contractPrice = contractPrice
         self.businessValue = businessValue
+        self.planned = False
+
+
+    def isPlanned(self):
+        self.planned = True
