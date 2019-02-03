@@ -39,5 +39,14 @@ class Stack:
         #print("Antal conta inrar i stack: ",self.nrOf-1)
         if container is None:
                 return -1
-        #print("return:")
         return container
+    def getSum(self):
+        sum = 0
+        for i in range(self.nrOf):
+            if self.containers[i].contractPrice != 'null':
+            #print(self.containers[i].contractPrice)
+                sum = self.containers[i].contractPrice + sum
+        return sum
+    def getNrOf(self):
+        return self.nrOf
+    

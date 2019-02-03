@@ -35,3 +35,7 @@ port.getInQueue()
 #port.getInQueue()
 
 #port.findHighestValueInColumn(1)
+print("Total: ", port.sumPrices())
+print("Quantity: ", port.nrOfCont())
+print("One move is: ", port.oneMoveCost())
+print("Z = ", port.moveQuality())

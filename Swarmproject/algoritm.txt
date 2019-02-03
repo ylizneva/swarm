@@ -1,4 +1,4 @@
 1. Add all containers at top level of each stack to a PQ, sorted by highest value (PQ contains ID of containers)
 2. Summarize each contianer in the PQ with the container below it.
 3. Update PQ.
-4. Om det är 1 move kvar - jämföra en sista container att plocka med dem som står på första layer
+4. Om det är 1 move kvar - jämföra en sista container att plocka med dem som står på första layer och swappa dem annars
