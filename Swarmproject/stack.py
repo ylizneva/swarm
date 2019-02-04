@@ -49,4 +49,3 @@ class Stack:
         return sum
     def getNrOf(self):
         return self.nrOf
-    
